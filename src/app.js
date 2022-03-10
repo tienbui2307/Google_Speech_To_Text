@@ -117,7 +117,7 @@ const request = {
 
 // =========================== START SERVER ================================ //
 
-server.listen(port, function () {
+server.listen(port, "127.0.0.1", function () {
   //http listen, to make socket work
   // app.address = "127.0.0.1";
   console.log("Server started on port:" + port);
