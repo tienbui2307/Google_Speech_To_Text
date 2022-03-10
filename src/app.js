@@ -13,7 +13,7 @@ const speech = require("@google-cloud/speech");
 const speechClient = new speech.SpeechClient(); // Creates a client
 
 const app = express();
-const port = process.env.PORT || 1337;
+const port = process.env.PORT || 80;
 const server = require("http").createServer(app);
 
 const io = require("socket.io")(server);
@@ -117,7 +117,7 @@ const request = {
 
 // =========================== START SERVER ================================ //
 
-server.listen(port, "127.0.0.1", function () {
+server.listen(port, function () {
   //http listen, to make socket work
   // app.address = "127.0.0.1";
   console.log("Server started on port:" + port);
